@@ -813,6 +813,86 @@ body {
     }
 
 }
+.sister-photos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
+    flex-wrap: wrap;
+    margin: 25px auto;
+    max-width: 850px;
+}
+
+.photo-card {
+    width: 150px;
+    padding: 8px 8px 25px;
+    background: white;
+    border-radius: 4px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.20);
+    animation: photoFloat 4s ease-in-out infinite;
+}
+
+.photo-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    display: block;
+    border-radius: 2px;
+}
+
+/* Different angles make them look like real Polaroids */
+
+.photo1 {
+    transform: rotate(-6deg);
+    animation-delay: 0s;
+}
+
+.photo2 {
+    transform: rotate(5deg);
+    animation-delay: 0.8s;
+}
+
+.photo3 {
+    transform: rotate(-3deg);
+    animation-delay: 1.6s;
+}
+
+.photo4 {
+    transform: rotate(7deg);
+    animation-delay: 2.4s;
+}
+
+@keyframes photoFloat {
+
+    0%, 100% {
+        translate: 0 0;
+    }
+
+    50% {
+        translate: 0 -8px;
+    }
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+    .sister-photos {
+        gap: 12px;
+        margin: 20px 10px;
+    }
+
+    .photo-card {
+        width: 120px;
+        padding: 6px 6px 20px;
+    }
+
+    .photo-card img {
+        height: 120px;
+    }
+
+}
+   
 
 
 
